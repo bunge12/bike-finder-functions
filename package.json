@@ -8,7 +8,9 @@
     "dev": "nodemon",
     "prepare": "husky install"
   },
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.1",
