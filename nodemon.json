@@ -1,0 +1,12 @@
+{
+  "watch": ["*"],
+  "ext": "js,json",
+  "ignore": [
+    "src/**/*.spec.ts",
+    "__blobstorage__",
+    "__queuestorage__",
+    "__azurite_db_blob__.json",
+    "__azurite_db_blob_extent__.json"
+  ],
+  "exec": "npm start"
+}

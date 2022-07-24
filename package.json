@@ -4,8 +4,11 @@
   "description": "",
   "scripts": {
     "start": "func start",
-    "test": "echo \"No tests yet...\""
+    "test": "echo \"No tests yet...\"",
+    "dev": "nodemon"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
