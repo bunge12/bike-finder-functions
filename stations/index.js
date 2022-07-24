@@ -55,6 +55,9 @@ const findNearestStations = (stations, status, filters) => {
       if (filters.item === "e-bikes") {
         return station.num_bikes_available_types.ebike > filters.quantity;
       }
+      if (filters.item === "docks") {
+        return station.num_docks_available > filters.quantity;
+      }
     })
     .slice(0, filters.stations);
 
@@ -80,10 +83,12 @@ module.exports = async function (context, req) {
         status: 204,
       };
     }
-    context.res = {
-      status: 200,
-      body: result,
-    };
+    if (result.length > 0) {
+      context.res = {
+        status: 200,
+        body: result,
+      };
+    }
   } catch (error) {
     context.res = {
       status: 500,
